@@ -99,6 +99,24 @@ async getQrEthereumTestnetCustomERC20(
     }
 ```
 
+## Example
+```typescript
+import { QRCodePlugin } from '@frankdev7/qr-web3';
+import { Web3 } from 'web3';
+
+const web3 = new Web3('YOUR_PROVIDER_URL');
+const qrCodePlugin = new QRCodePlugin();
+
+web3.registerPlugin(qrCodePlugin);
+
+const qrData = {
+				to: '0x7772fb5804c9C60B76C56aBEEb79f2F6d54519C4', // SOME ADDRESS TO TRANSFER
+				value: '0.1' // SOME VALUE 0.1 ETH
+			};
+
+const qr = await web3.qrcode.getQrEthereumMainnet(qrData);
+console.log(qr);
+```
 ## Useful links
 
 [base64-to-image-converter](https://codebeautify.org/base64-to-image-converter)
