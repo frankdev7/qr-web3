@@ -117,7 +117,7 @@ export class QRCodePlugin extends Web3PluginBase {
       }
 
       let valueWei = Web3.utils.toWei(value, 'ether');
-      const qrData = `ethereum:${erc20}@${ChainId.MAINNET}/transfer?address=${to}&value=${valueWei}`;
+      const qrData = `ethereum:${erc20}@${ChainId.MAINNET}/transfer?address=${to}&uint256=${valueWei}`;
 
       const qr = await QRCode.toDataURL(qrData);
       return qr;
@@ -163,7 +163,7 @@ export class QRCodePlugin extends Web3PluginBase {
       }
 
       let valueWei = Web3.utils.toWei(value, 'ether');
-      const qrData = `ethereum:${erc20}@${chainId}/transfer?address=${to}&value=${valueWei}`;
+      const qrData = `ethereum:${erc20}@${chainId}/transfer?address=${to}&uint256=${valueWei}`;
 
       const qr = await QRCode.toDataURL(qrData);
       return qr;

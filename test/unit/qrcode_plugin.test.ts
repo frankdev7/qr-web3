@@ -92,12 +92,11 @@ describe('QRCodePlugin Tests', () => {
 			const qrData = {
 				erc20: '0x779877A7B0D9E8603169DdbD7836e478b4624789', // Link Token
 				to: '0xA8D54c204127177d7b6C9156F7caD31894455607', // Simon's Custom Contract
-				value: '0.1',
+				value: '1',
 				chainId: 11155111,
 			};
 
 			const qr = await web3Context.qrcode.getQrEthereumTestnetCustomERC20(qrData);
-			console.log(qr);
 			expect(qr).toEqual(expect.stringMatching(/^data:image\/png;base64,/));
 		});
 	});
