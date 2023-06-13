@@ -2,13 +2,14 @@
 
 ![ES Version](https://img.shields.io/badge/ES-2020-yellow)
 ![Node Version](https://img.shields.io/badge/node-18.x-green)
+![NPM Version](https://img.shields.io/badge/npm-9.6.7-blue)
 
 This is a [web3.js](https://github.com/web3/web3.js) `4.x` plugin to generate payable QR Codes.
 
 ## Prerequisites
 
--   :gear: [NodeJS](https://nodejs.org/) (LTS/Fermium)
-
+- ⚙️ [NodeJS](https://nodejs.org/) (LTS/Fermium)
+- 🧰 [NPM](https://www.npmjs.com/)
 ## Installation
 
 ```bash
@@ -99,7 +100,7 @@ async getQrEthereumTestnetCustomERC20(
     }
 ```
 
-## Example
+## Example 1
 ```typescript
 import { QRCodePlugin } from '@frankdev7/qr-web3';
 import { Web3 } from 'web3';
